@@ -8,13 +8,13 @@ body {
     justify-content: space-between;
     /* align-items: center; */  
     padding: 20px;
-    background-color: gray;
+    background-color: #5D6D7E;
     transition: background-color 0.3s ease-in-out;
 }
 
 .logo img {
     width: 50px;
-    height: auto;
+    height: auto;   
     animation: rotateLogo 5s infinite linear;
 }
 
@@ -74,3 +74,34 @@ body {
         transform: none;
     }
 }
+
+/* Texto autoescrito */
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid DodgerBlue;
+    height: 30px;
+    width: 10%;
+  }
+  
+
+h1 {
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#autoescrito {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: borrar-reescribir infinite;
+  }
+  
+  @keyframes borrar-reescribir {
+    0% { width: 100%; }
+    50% { width: 0; }
+    51% { width: 0; }
+    100% { width: 100%; }
+  }
