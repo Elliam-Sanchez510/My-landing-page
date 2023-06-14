@@ -74,6 +74,7 @@ body {
         opacity: 1;
         transform: none;
     }
+
 }
 
 /* Texto autoescrito */
@@ -87,6 +88,19 @@ body {
     height: 30px;
     width: 10%;
 }
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .welcome {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .welcome {
+      width: 50%;
+    }
+  }
 
 
 h1 {
