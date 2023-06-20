@@ -2,59 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/chat.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Landing Page</title>
+  <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/chat.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="../images/react-native.gif" alt="logo" class="rotate">
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">WORK</a></li>
-                <li><a href="../html/servicios.html">SERVICES</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="welcome">
-        <h1 id="autoescrito">Welcome</h1>
-    </section>
-
-    <div class="slider">
-        <img src="../images/html.jpeg" alt="Imagen 1">
-        <img src="../images/css.png" alt="Imagen 2">
-        <img src="../images/bootstrap.png" alt="Imagen 3">
-        <img src="../images/vue.png" alt="Imagen 3">
-    </div>
-
-    <div id="chatbot-container">
-        <div id="chatbot-window">
-          <div id="chatbot-header">
-            <h3>Chatbot</h3>
-            <button id="chatbot-close-button">X</button>
-          </div>
-          <div id="chatbot-messages"></div>
-          <div id="chatbot-input-container">
-            <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-            <button id="send-button">Enviar</button>
-          </div>
-        </div>
-        <div id="chatbot-toggle">
-          <img src="../images/logo.png" width="80px" alt="Abrir chat">
-        </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../images/logo.png" alt="logo" class="rotate">
       </div>
-    
+      <ul class="navbar-menu">
+        <li><a href="">HOME</a></li>
+        <li><a href="../html/about.html">ABOUT</a></li>
+        <li><a href="">WORK</a></li>
+        <li><a href="../html/servicios.html">SERVICES</a></li>
+        <li><a href="">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome">
+    <h1 id="autoescrito">Welcome</h1>
+  </section>
+
+  <div class="slider">
+    <img src="../images/html-5.png" alt="Imagen 1">
+    <img src="../images/css-3.png" alt="Imagen 2">
+    <img src="../images/bootstrap.png" alt="Imagen 3">
+    <img src="../images/vue.png" alt="Imagen 4">
+    <img src="../images/js.png" alt="Imagen 5">
+    <img src="../images/react.png" alt="Imagen 6">
+    <img src="../images/angular.png" alt="Imagen 7">
+  </div>
+
+  <div id="chatbot-container">
+    <div id="chatbot-window">
+      <div id="chatbot-header">
+        <h3>Chatbot</h3>
+        <button id="chatbot-close-button">X</button>
+      </div>
+      <div id="chatbot-messages"></div>
+      <div id="chatbot-input-container">
+        <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+        <button id="send-button">Enviar</button>
+      </div>
+    </div>
+    <div id="chatbot-toggle">
+      <img src="../images/logo.png" width="80px" alt="Abrir chat">
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="contacto" id="contacto">
+    <div class="contenido-seccion">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <h3>Ponte en contacto ahora mismo!</h3>
+
+        <div class="fila">
+            <div class="col">
+                <h2>
+                    <i class="fa-solid fa-phone"></i> Teléfono
+                </h2>
+                <span class="info-contacto">+505 85960195</span>
+            </div>
+            <div class="col">
+                <h2>
+                    <i class="fa-solid fa-envelope"></i> Correo
+                </h2>
+                <span class="info-contacto">elliamsanchez510@gmail.com</span>
+            </div>
+            <div class="col">
+                <h2>
+                    <i class="fa-solid fa-globe"></i> Github
+                </h2>
+                <span class="info-contacto">Elliam-Sanchez510</span>
+            </div>
+        </div>
+    </div>
+  </footer>
+
 </body>
 <script src="../js/autoescrito.js"></script>
 <script src="../js/slide.js"></script>
