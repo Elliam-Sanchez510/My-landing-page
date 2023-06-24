@@ -27,8 +27,6 @@ function sendMessage() {
     const userMessage = userInput.value;
     if (userMessage.trim() !== '') {
         appendMessage('user', userMessage);
-        // Aquí puedes agregar la lógica para procesar la respuesta del chatbot y llamar a una API, por ejemplo
-        // Luego, obtén la respuesta del chatbot y llamar a la función appendMessage con el mensaje del chatbot
         userInput.value = '';
     }
 }

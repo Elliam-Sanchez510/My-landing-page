@@ -1,5 +1,3 @@
-
-//Creo las barritas de una barra particular identificada por su id
 function crearBarra(id_barra) {
     for (i = 0; i <= 16; i++) {
         let div = document.createElement("div");
@@ -8,7 +6,6 @@ function crearBarra(id_barra) {
     }
 }
 
-//selecciono todas las barras generales par aluego manipularlas
 let html = document.getElementById("html");
 crearBarra(html);
 let javascript = document.getElementById("javascript");
@@ -22,14 +19,9 @@ crearBarra(php);
 let ilustrator = document.getElementById("ilustrator");
 crearBarra(ilustrator);
 
-//Ahora voy a guardar la cantidad de barritas que se van a ir pintando por cada barar
-//para eso utilizo un arreglo, cada posiciòn pertenece a un elemento
-//comienzan en -1 porque no tiene ninguna pintada al iniciarse
 let contadores = [-1, -1, -1, -1, -1, -1];
-//esta variable la voy a utilizar de bandera para saber si ya ejecuto la animación
 let entro = false;
 
-//función que aplica las animaciones de la habilidades
 function efectoHabilidades() {
     var habilidades = document.getElementById("habilidades");
     var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
@@ -56,19 +48,17 @@ function efectoHabilidades() {
     }
 }
 
-//lleno una barra particular con la cantidad indicada
 function pintarBarra(id_barra, cantidad, indice, interval) {
     contadores[indice]++;
     x = contadores[indice];
     if (x < cantidad) {
         let elementos = id_barra.getElementsByClassName("e");
-        elementos[x].style.backgroundColor = "#940253";
+        elementos[x].style.backgroundColor = "#29B6F6";
     } else {
         clearInterval(interval)
     }
 }
 
-//detecto el scrolling del mouse para aplicar la animación de la barra
 window.onscroll = function () {
     efectoHabilidades();
 }
