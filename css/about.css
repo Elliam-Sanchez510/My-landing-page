@@ -21,7 +21,7 @@
     text-align: center;
     padding: 0 10px;
 }
-    
+
 .info {
     padding: 25px;
     padding-bottom: 130px;
@@ -40,17 +40,28 @@
 }
 
 .foto {
-    position: relative;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .foto img {
-    max-width: 200px;
     border-radius: 50%;
-    border: 5px solid #5483B3;
-    position: absolute;
-    left: 50%;
-    top: -100px;
-    transform: translateX(-50%);
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    image-rendering: optimizequality;
+}
+
+@media (max-width: 768px) {
+    .foto {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: auto;
+    }
 }
 
 /* sobre mi */
@@ -94,7 +105,8 @@
 }
 
 .sobremi .contenido-seccion .fila .col i {
-    color: #5483B3;;
+    color: #5483B3;
+    ;
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -113,7 +125,7 @@
 .habilidades {
     padding: 80px 0 100px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),  
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
         url("../images/habilidades.jpg");
     background-size: cover;
     background-attachment: fixed;
