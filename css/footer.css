@@ -1,5 +1,5 @@
 footer {
-    background-color: #f9f9f9;
+    background-color: #2E424D;
     padding: 20px;
     text-align: center;
 }
@@ -34,6 +34,7 @@ footer {
 .copyright {
     font-size: 20px;
     margin-top: 20px;
+    color: #FFFFFF;
 }
 
 

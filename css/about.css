@@ -98,10 +98,12 @@
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
+    /* background-color: #b5c1ce; */
 }
 
 .sobremi .contenido-seccion .fila .col {
     width: 30%;
+    margin: 6px;
 }
 
 .sobremi .contenido-seccion .fila .col i {
@@ -114,6 +116,10 @@
     border-radius: 50%;
 }
 
+.miperfil {
+    text-align: justify;
+}
+
 .sobremi .contenido-seccion .fila .col span {
     display: block;
     font-weight: bold;
@@ -122,10 +128,6 @@
     font-size: 14px;
     text-transform: uppercase;
     text-align: center;
-    background-color: #5483B3;
-}
-
-p {
 }
 
 /* HABILIDADES */
