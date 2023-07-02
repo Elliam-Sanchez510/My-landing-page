@@ -132,36 +132,33 @@ h1 {
     }
 }
 
-
-.parraf1 {
-    font-family: Arial, sans-serif;
+.interactive-paragraph {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .interactive-paragraph:hover {
+    transform: scale(1.05);
+  }
+  
+  .interactive-paragraph p {
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #f7f7f7;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-}
-
-.parra2 {
-    font-family: Times New Roman, serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 30px;
-    border: 2px solid #ddd;
-}
-
-.parraf3 {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #666;
-    background-color: #f2f2f2;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #bbb;
-}
+    margin: 0;
+  }
+  
+  .interactive-paragraph .highlight {
+    color: black;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .interactive-paragraph {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
