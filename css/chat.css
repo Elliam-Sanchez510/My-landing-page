@@ -6,13 +6,12 @@
     cursor: pointer;
   }
   
-  
   #chatbot-window {
     display: none;
     width: 300px;
     height: 400px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 2px solid #3c86e7;
     border-radius: 5px;
     padding: 10px;
     overflow-y: scroll;
@@ -79,4 +78,3 @@
     padding: 5px;
     border-radius: 3px;
   }
-  

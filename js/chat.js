@@ -38,3 +38,14 @@ function appendMessage(sender, message) {
     chatbotMessages.appendChild(messageElement);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
+
+function mostrarAlerta() {
+    alert("Opcion no disponible");
+    var chatbotContainer = document.getElementById("chatbot-container");
+    chatbotContainer.style.display = "none";
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var imgIcon = document.getElementById("chatbot-toggle");
+    imgIcon.addEventListener("click", mostrarAlerta);
+  });
