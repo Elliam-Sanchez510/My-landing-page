@@ -18,10 +18,11 @@ chatbotCloseButton.addEventListener('click', () => {
 
 sendButton.addEventListener('click', sendMessage);
 userInput.addEventListener('keydown', (event) => {
-    if (event.keyCode === 13) {
+    if (event.key === 'Enter') {
         sendMessage();
     }
 });
+
 
 function sendMessage() {
     const userMessage = userInput.value;
