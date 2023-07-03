@@ -143,6 +143,7 @@ h1 {
   
   .interactive-paragraph:hover {
     transform: scale(1.05);
+    background-color: #5D6D7E;
   }
   
   .interactive-paragraph p {

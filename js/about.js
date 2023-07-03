@@ -1,5 +1,5 @@
 function crearBarra(id_barra) {
-    for (i = 0; i <= 16; i++) {
+    for (i = 0; i <= 9; i++) {
         let div = document.createElement("div");
         div.className = "e";
         id_barra.appendChild(div);
@@ -14,8 +14,8 @@ let wordpress = document.getElementById("wordpress");
 crearBarra(wordpress);
 let photoshop = document.getElementById("photoshop");
 crearBarra(photoshop);
-let php = document.getElementById("php");
-crearBarra(php);
+let react = document.getElementById("react");
+crearBarra(react);
 let ilustrator = document.getElementById("ilustrator");
 crearBarra(ilustrator);
 
@@ -25,25 +25,25 @@ let entro = false;
 function efectoHabilidades() {
     var habilidades = document.getElementById("habilidades");
     var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
-    if (distancia_skills >= 300 && entro == false) {
+    if (distancia_skills >= 100 && entro == false) {
         entro = true;
         const intervalHtml = setInterval(function () {
-            pintarBarra(html, 16, 0, intervalHtml);
+            pintarBarra(html, 8, 0, intervalHtml);
         }, 100);
         const intervalJavascript = setInterval(function () {
-            pintarBarra(javascript, 11, 1, intervalJavascript);
+            pintarBarra(javascript, 7, 1, intervalJavascript);
         }, 100);
         const intervalWordpress = setInterval(function () {
-            pintarBarra(wordpress, 11, 2, intervalWordpress);
+            pintarBarra(wordpress, 7, 2, intervalWordpress);
         }, 100);
         const intervalPhotoshop = setInterval(function () {
-            pintarBarra(photoshop, 15, 3, intervalPhotoshop);
+            pintarBarra(photoshop, 7, 3, intervalPhotoshop);
         }, 100);
-        const intervalPhp = setInterval(function () {
-            pintarBarra(php, 16, 4, intervalPhp);
+        const intervalReact = setInterval(function () {
+            pintarBarra(react, 7, 4, intervalReact);
         }, 100);
         const intervalIlustrator = setInterval(function () {
-            pintarBarra(ilustrator, 11, 5, intervalIlustrator);
+            pintarBarra(ilustrator, 7, 5, intervalIlustrator);
         }, 100);
     }
 }
