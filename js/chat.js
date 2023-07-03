@@ -29,7 +29,7 @@ function sendMessage() {
     if (userMessage.trim() !== '') {
         appendMessage('user', userMessage);
         userInput.value = '';
-    }
+    }this
 }
 
 function appendMessage(sender, message) {
