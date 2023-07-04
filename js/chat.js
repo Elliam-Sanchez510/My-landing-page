@@ -23,13 +23,15 @@ userInput.addEventListener('keydown', (event) => {
     }
 });
 
-
 function sendMessage() {
-    const userMessage = userInput.value;
-    if (userMessage.trim() !== '') {
+    const userMessage = userInput.value.trim();
+    if (userMessage !== '') {
         appendMessage('user', userMessage);
         userInput.value = '';
-    }this
+
+        // Enviar la consulta al servidor de FastAPI
+        sendQueryToChatbot(userMessage);
+    }
 }
 
 function appendMessage(sender, message) {
@@ -40,13 +42,23 @@ function appendMessage(sender, message) {
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
 
-function mostrarAlerta() {
-    alert("Opcion no disponible");
-    var chatbotContainer = document.getElementById("chatbot-container");
-    chatbotContainer.style.display = "none";
-  }
+function sendQueryToChatbot(query) {
+    const url = "http://localhost:8000/send-query/";
+    const data = { query: query };
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var imgIcon = document.getElementById("chatbot-toggle");
-    imgIcon.addEventListener("click", mostrarAlerta);
-  });
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => response.json())
+        .then(data => {
+            const chatbotResponse = data.chatbot_response;
+            appendMessage('chatbot', chatbotResponse);
+        })
+        .catch(error => {
+            console.error('Error al enviar la consulta al chatbot:', error);
+        });
+}
