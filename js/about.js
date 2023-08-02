@@ -40,7 +40,7 @@ function efectoHabilidades() {
             pintarBarra(photoshop, 7, 3, intervalPhotoshop);
         }, 100);
         const intervalReact = setInterval(function () {
-            pintarBarra(react, 7, 4, intervalReact);
+            pintarBarra(react, 6, 4, intervalReact);
         }, 100);
         const intervalIlustrator = setInterval(function () {
             pintarBarra(ilustrator, 7, 5, intervalIlustrator);
