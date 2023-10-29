@@ -1,133 +1,61 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     color: #333;
+    margin-bottom: 30px;
 }
 
-/* Estilos del formulario */
-#contactForm {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease;
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#contactForm label {
+label {
     display: block;
-    margin-bottom: 10px;
-    color: #333;
     font-weight: bold;
-    animation: slideInLeft 0.5s ease;
+    margin-bottom: 5px;
 }
 
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-#contactForm input[type="text"],
-#contactForm input[type="email"],
-#contactForm textarea {
-    width: 100%;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
-    animation: slideInRight 0.5s ease;
+    font-size: 16px;
 }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-#contactForm input[type="text"]:focus,
-#contactForm input[type="email"]:focus,
-#contactForm textarea:focus {
-    border-color: #6c63ff;
-    outline: none;
-}
-
-#contactForm input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #6c63ff;
-    color: #fff;
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
-    animation: scaleIn 0.5s ease;
 }
 
-@keyframes scaleIn {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-#contactForm input[type="submit"]:hover {
-    background-color: #4b45b4;
-    animation: pulse 0.5s ease infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #contactForm {
-        max-width: 100%;
-        padding: 10px;
-    }
+button:hover {
+    background-color: #45a049;
 }
